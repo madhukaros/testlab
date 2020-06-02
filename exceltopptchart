@@ -1,0 +1,8 @@
+import win32com.client # Import Win32com.client
+xlfile = r'C:\Users\emadhsh\Documents\Asiacell\Summary of MC Audit.xlsx' # Define variable as excel path
+ExcelApp = win32com.client.Dispatch("Excel.Application") # Open blank excel
+ExcelApp.Visible = True # make blank excel visible
+workbook = ExcelApp.Workbooks.Open(xlfile) # open workbook from path defined earlier as xlfile
+PPApp = win32com.client.Dispatch("Powerpoint.Application")
+PPApp.Visible = True
+presentation = PPApp.Presentations.Add()
